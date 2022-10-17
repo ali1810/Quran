@@ -38,7 +38,7 @@ def displayPDF(file):
           pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="950" type="application/pdf"></iframe>'
 
     # Displaying File
-    st.markdown(pdf_display, unsafe_allow_html=True)
+          st.markdown(pdf_display, unsafe_allow_html=True)
 
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
