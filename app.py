@@ -31,11 +31,11 @@ with col3:
 #b = st.button("Paracc")
 def displayPDF(file):
     # Opening file from file path. this is used to open the file from a website rather than local
-    with urllib.request.urlopen(file) as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+     with urllib.request.urlopen(file) as f:
+          base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
     # Embedding PDF in HTML
-        pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="950" type="application/pdf"></iframe>'
+          pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="950" type="application/pdf"></iframe>'
 
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
