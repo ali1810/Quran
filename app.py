@@ -71,5 +71,4 @@ if p2:
    # p2=st.button('Para3')
     #p3=st.button('Para4')
 
-if __name__ == "__main__":
-    app.run(debug=True, port=7000)
+
