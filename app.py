@@ -1,11 +1,11 @@
 ### This code is developed to explore the 
 
+import requests
+import urllib.request
+
 import base64
 import streamlit as st
 from PIL import Image
-import urllib
-import requests
-import urllib.request
 
 m = st.markdown("""
 <style>
@@ -29,24 +29,16 @@ with col2:
 with col3:	
         st.write("")
 #b = st.button("Paracc")
-def displayPDF(file):
-    # Opening file from file path. this is used to open the file from a website rather than local
-     with urllib.request.urlopen(file) as f:
-          base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-
-    # Embedding PDF in HTML
-          pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="950" type="application/pdf"></iframe>'
 
     # Displaying File
-          st.markdown(pdf_display, unsafe_allow_html=True)
+    
+
+
 
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
           base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-          pdf_display = F'<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://example.com/the.pdf" width="500" height="375">'
-
-    #pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
-
+    pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
     st.markdown(pdf_display, unsafe_allow_html=True)
 st.sidebar.header("Please Select the Chapter:")
 with st.sidebar:
@@ -55,8 +47,8 @@ with st.sidebar:
      #p3 = st.checkbox('Sahi-Bukhari')
      #p4 = st.checkbox('Fazaile-Amal')
 if p1:
+    #displayPDF('Para1')
     show_pdf("Para1.pdf")
-    #show_pdf("Para1.pdf")
 if p2:
     show_pdf("Para2.pdf")
 #if p4:
@@ -70,5 +62,4 @@ if p2:
   #  p2=st.button('Para2')
    # p2=st.button('Para3')
     #p3=st.button('Para4')
-
 
