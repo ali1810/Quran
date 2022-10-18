@@ -55,7 +55,7 @@ with st.sidebar:
      #p3 = st.checkbox('Sahi-Bukhari')
      #p4 = st.checkbox('Fazaile-Amal')
 if p1:
-    displayPDF("Para1.pdf")
+    show_pdf("Para1.pdf")
     #show_pdf("Para1.pdf")
 if p2:
     show_pdf("Para2.pdf")
