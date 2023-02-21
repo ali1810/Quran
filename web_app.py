@@ -20,8 +20,8 @@ with st.sidebar:
     }
     )
 
-logo = Image.open(r'C:\Users\13525\Desktop\Insights_Bees_logo.png')
-profile = Image.open(r'C:\Users\13525\Desktop\medium_profile.png')
+logo = Image.open('Aayat-as-shifa-6.png')
+#profile = Image.open(r'C:\Users\13525\Desktop\medium_profile.png')
 if choose == "About":
     col1, col2 = st.columns( [0.8, 0.2])
     with col1:               # To display the header text using css style
