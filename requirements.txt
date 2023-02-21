@@ -5,4 +5,4 @@ Werkzeug==0.15.5
 streamlit_option_menu
 numpy==1.21.4
 streamlit_text_rating
-pandas==1.3.5
+
