@@ -1,12 +1,12 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+#from streamlit_option_menu import option_menu
 #import streamlit.components.v1 as html
 from  PIL import Image
 import numpy as np
 import pandas as pd
 #import streamlit.components.v1 as components
 import base64
-from streamlit_text_rating.st_text_rater import st_text_rater
+#from streamlit_text_rating.st_text_rater import st_text_rater
 
 with st.sidebar:
     choose = option_menu("Main Menu", ["About", "Projects", "Blog","Apps", "Contact"],
@@ -70,22 +70,22 @@ elif choose == "Blog":
             col1, col2,col3= st.columns(3)
             with col1:  
                 if st.button('Read PDF Tutorial',key='1'):            
-                    show_pdf('post1-compressed.pdf')
+                    show_pdf('Para2.pdf')
             with col2:
                 st.button('Close PDF Tutorial',key='2')                   
             with col3:
-                with open("post1-compressed.pdf", "rb") as pdf_file:
+                with open("Para2.pdf", "rb") as pdf_file:
                     PDFbyte = pdf_file.read()
                 st.download_button(label="Download PDF Tutorial", key='3',
                         data=PDFbyte,
-                        file_name="pandas-clean-id-column.pdf",
+                        file_name="Para2.pdf",
                         mime='application/octet-stream')
 
             for text in ["Is this tutorial helpful?"]:
                     response = st_text_rater(text=text, key='1')
 
             st.write('---')
-            feature_image2 = Image.open(r'C:\Users\13525\Desktop\Insights Bees\streamlit_website\Images\feature_image3.png')
+            feature_image2 = Image.open('Aayat-as-shifa-6.png')
             with st.container():
                 image_col, text_col = st.columns((1,3))
                 with image_col:
@@ -118,7 +118,7 @@ elif choose == "Blog":
                     response = st_text_rater(text=text, key='2')
 
             st.write('---')
-            feature_image3 = Image.open(r'C:\Users\13525\Desktop\Insights Bees\streamlit_website\Images\feature_image2.png')
+            feature_image3 = Image.open('Aayat-as-shifa-6.png')
             with st.container():
                 image_col, text_col = st.columns((1,3))
                 with image_col:
