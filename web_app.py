@@ -142,5 +142,5 @@ elif choose == "Blog":
                         data=PDFbyte,
                         file_name="para1.pdf",
                         mime='application/octet-stream')
-            for text in ["Is this tutorial helpful?"]:
-                response = st_text_rater(text=text, key='3')
+            #for text in ["Is this tutorial helpful?"]:
+             #   response = st_text_rater(text=text, key='3')
