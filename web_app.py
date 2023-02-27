@@ -98,24 +98,24 @@ elif choose == "Blog":
                     st.markdown('<p class="font">How to Batch Rename Columns in Pandas Based on Patterns</p>', unsafe_allow_html=True)    
                     st.markdown("By Sharone Li - If you have been following my Medium blog for some time, you may notice that I usually like to share... [Continue to Read on CodeX](https://medium.com/codex/how-to-batch-rename-columns-in-pandas-based-on-patterns-7d2382b5fc9a)")
                    
-            col1, col2,col3 = st.columns(3)
-            with col1: 
+            #col1, col2,col3 = st.columns(3)
+            #with col1: 
                 #st.button('Read PDF Tutorial', key='1')
  
-                if st.button('Read PDF Tutorial',key='7'): 
-                  show_pdf('post3.pdf')
-            with col2:
-                st.button('Close PDF Tutorial',key='8')                   
-            with col3:
-                with open("post3.pdf", "rb") as pdf_file:
-                    PDFbyte = pdf_file.read()
+             #   if st.button('Read PDF Tutorial',key='7'): 
+              #    show_pdf('post3.pdf')
+            #with col2:
+             #   st.button('Close PDF Tutorial',key='8')                   
+            #with col3:
+             #   with open("post3.pdf", "rb") as pdf_file:
+              #      PDFbyte = pdf_file.read()
 
-                st.download_button(label="Download PDF Tutorial",key='9',
-                        data=PDFbyte,
-                        file_name="pandas-rename-columns.pdf",
-                        mime='application/octet-stream')
-            for text in ["Is this tutorial helpful?"]:
-                    response = st_text_rater(text=text, key='2')
+               # st.download_button(label="Download PDF Tutorial",key='9',
+                #        data=PDFbyte,
+                 #       file_name="pandas-rename-columns.pdf",
+                  #      mime='application/octet-stream')
+            #for text in ["Is this tutorial helpful?"]:
+             #       response = st_text_rater(text=text, key='2')
 
             st.write('---')
             feature_image3 = Image.open('Aayat-as-shifa-6.png')
