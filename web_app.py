@@ -133,10 +133,10 @@ elif choose == "Blog":
                 if st.button('Read PDF Tutorial',key='4'): 
                     show_pdf('para1.pdf')
             with col2:
-                st.button('Close PDF Tutorial',key='5')                   
+                   st.button('Close PDF Tutorial',key='5')                   
             with col3:
-                with open("para1.pdf", "rb") as pdf_file:
-                    PDFbyte = pdf_file.read()
+                   with open("para1.pdf", "rb") as pdf_file:
+                      PDFbyte = pdf_file.read()
 
                 st.download_button(label="Download PDF Tutorial",key='6',
                         data=PDFbyte,
