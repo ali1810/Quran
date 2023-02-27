@@ -131,14 +131,14 @@ elif choose == "Blog":
             col1, col2,col3 = st.columns(3)
             with col1:
                 if st.button('Read PDF Tutorial',key='4'): 
-                    show_pdf('para1.pdf')
+                   show_pdf('para1.pdf')
             with col2:
                    st.button('Close PDF Tutorial',key='5')                   
             with col3:
                    with open("para1.pdf", "rb") as pdf_file:
                       PDFbyte = pdf_file.read()
 
-                st.download_button(label="Download PDF Tutorial",key='6',
+                   st.download_button(label="Download PDF Tutorial",key='6',
                         data=PDFbyte,
                         file_name="para1.pdf",
                         mime='application/octet-stream')
