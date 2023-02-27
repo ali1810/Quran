@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import streamlit.components.v1 as components
 import base64
-from streamlit_text_rating.st_text_rater import st_text_rater
+#from streamlit_text_rating.st_text_rater import st_text_rater
 
 with st.sidebar:
     choose = option_menu("Main Menu", ["About", "Projects", "Blog","Apps", "Contact"],
@@ -33,7 +33,7 @@ if choose == "About":
         st.image(logo, width=130 )
     
     st.write("Sharone Li is a data science practitioner, enthusiast, and blogger. She writes data science articles and tutorials about Python, data visualization, Streamlit, etc. She is also an amateur violinist who loves classical music.\n\nTo read Sharone's data science posts, please visit her Medium blog at: https://medium.com/@insightsbees")    
-    st.image(profile, width=700 )
+    #st.image(profile, width=700 )
 
 elif choose == "Blog": 
         topic = option_menu(None, ["Streamlit", "Pandas","Plotly", "Folium"],
@@ -51,7 +51,7 @@ elif choose == "Blog":
         def show_pdf(file_path):
             with open(file_path,"rb") as f:
                 base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-            pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
+            pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="600" height="600" type="application/pdf"></iframe>'
             st.markdown(pdf_display, unsafe_allow_html=True)
         
         if topic=='Pandas':
