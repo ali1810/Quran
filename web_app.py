@@ -81,8 +81,8 @@ elif choose == "Blog":
                         file_name="Para2.pdf",
                         mime='application/octet-stream')
 
-            for text in ["Is this tutorial helpful?"]:
-                    response = st_text_rater(text=text, key='1')
+            #for text in ["Is this tutorial helpful?"]:
+             #       response = st_text_rater(text=text, key='1')
 
             st.write('---')
             feature_image2 = Image.open('Aayat-as-shifa-6.png')
