@@ -75,15 +75,15 @@ elif choose == "Blog":
             col1, col2,col3= st.columns(3)
             with col1:  
                 if st.button('Read PDF Tutorial',key='1'):            
-                    show_pdf('Para2.pdf')
+                    show_pdf('Para1.pdf')
             with col2:
                 st.button('Close PDF Tutorial',key='2')                   
             with col3:
-                with open("post1-compressed.pdf", "rb") as pdf_file:
+                with open("Para1.pdf", "rb") as pdf_file:
                     PDFbyte = pdf_file.read()
                 st.download_button(label="Download PDF Tutorial", key='3',
                         data=PDFbyte,
-                        file_name="Para2.pdf",
+                        file_name="Para1.pdf",
                         mime='application/octet-stream')
 
             #for text in ["Is this tutorial helpful?"]:
