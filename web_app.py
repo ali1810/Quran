@@ -51,8 +51,13 @@ elif choose == "Blog":
         def show_pdf(file_path):
             with open(file_path,"rb") as f:
                 base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-            pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="600" height="600" type="application/pdf"></iframe>'
+            pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="600" height="600" type="application/pdf">'
             st.markdown(pdf_display, unsafe_allow_html=True)
+        
+
+
+
+    
         
         if topic=='Pandas':
             feature_image1 = Image.open('Aayat-as-shifa-6.png')
