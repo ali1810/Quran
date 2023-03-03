@@ -74,7 +74,7 @@ elif choose == "Blog":
             with col2:
                 st.button('Close PDF Tutorial',key='2')                   
             with col3:
-                with open("Para1-compressed.pdf", "rb") as pdf_file:
+                with open("Post1-compressed.pdf", "rb") as pdf_file:
                     PDFbyte = pdf_file.read()
                 st.download_button(label="Download PDF Tutorial", key='3',
                         data=PDFbyte,
